@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <meta name="author" content="Rafael (de Lima) Pereira">
+    <meta name="description" content="Pomodoro timer made by me">
+    <title>Pomodoro</title>
+</head>
+<body>
+    <a class="menu" href="#"><span class="material-symbols-outlined">
+        menu
+        </span></a>
+    <header>
+        <h1>Pomodoro timer</h1>
+        <div class="time">
+            <span class="hours">
+                <h5>Hrs</h5>
+                <p id="hours">0</p>
+            </span>
+            <span class="minutes">
+                <h5>Min</h5>
+                <p id="minutes">50</p>
+            </span>
+            <span class="seconds">
+                <h5>Seg</h5>
+                <p id="seconds">0</p>
+            </span>
+        </div>
+        <div class="buttons">
+            <button id="start" onclick="start()">Começar</button>
+            <button id="pause" onclick="reset()">Resetar</button>
+            <button id="stop" onclick="stop()">Parar</button>
+        </div>
+    </header>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>

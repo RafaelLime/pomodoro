@@ -1,0 +1,118 @@
+/* Configurações iniciais padrões para páginas*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/*Configuração do corpo da página*/
+body{
+    width: 100vw;
+    height: 100vh;
+}
+/*Estilização do cabeçalho*/
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid red; */
+    width:100%;
+    height:100%;
+    flex-flow: column wrap;
+}
+/*Estilização do temporizador*/
+.time{
+    /* border:1px solid black; */
+    width:40%;
+    height:35%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.hours, .minutes, .seconds{
+    width: 64px;
+    height: 64px;
+    padding:16px;
+    border:1px solid black;
+    border-radius: 10px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.hours, .minutes, .seconds p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.hours, .minutes, .seconds h4{
+    text-transform: lowercase;
+    font-size: 24px;
+
+}
+/*Estilização dos botões*/
+.buttons{
+    display:flex;
+    /* border:1px solid green; */
+    justify-content: space-around;
+    align-items: center;
+    width:40%;
+    height: 10%;
+}
+.buttons button{
+    padding:10px 20px;
+    color:white;
+    font-weight: bold;
+    border:none;
+    border-radius: 2px;
+}
+.buttons button:hover{
+    cursor: pointer;
+
+}
+#start{
+    background-color: blue;
+    border: 1px solid white;
+    transition: 0.5s ease;
+}
+#start:hover{
+    border:1px solid blue;
+    background-color: white;
+    color:blue;
+}
+#stop{
+    background-color: red;
+    border: 1px solid white;
+    transition: 0.5s ease;
+}
+#stop:hover{
+    background-color: white;
+    color:red;
+    border: 1px solid red;
+}
+#pause{
+    background-color: orange;
+    border: 1px solid white;
+    transition: 0.5s ease;
+}
+#pause:hover{
+    background-color: white;
+    border:1px solid orange;
+    color:orange;
+}
+/*Configuração do botão de menu*/
+.menu{
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    /* border:1px solid black; */
+    position:fixed;
+    left:8px;
+    top:8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color:black;
+}
+
