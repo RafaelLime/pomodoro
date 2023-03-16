@@ -8,35 +8,51 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <meta name="author" content="Rafael (de Lima) Pereira">
     <meta name="description" content="Pomodoro timer made by me">
+    <script src="JS/script.js" defer></script>
     <title>Pomodoro</title>
 </head>
 <body>
-    <a class="menu" href="#"><span class="material-symbols-outlined">
-        menu
-        </span></a>
+    <!--Begin Header-->
     <header>
+        <!--Begin Pomodoro-->
         <h1>Pomodoro timer</h1>
         <div class="time">
-            <span class="hours">
-                <h5>Hrs</h5>
-                <p id="hours">0</p>
-            </span>
             <span class="minutes">
                 <h5>Min</h5>
-                <p id="minutes">50</p>
+                <p id="minutes">0</p>
             </span>
             <span class="seconds">
                 <h5>Seg</h5>
                 <p id="seconds">0</p>
             </span>
         </div>
+        <!--End Pomodoro-->
+
+        <!--Begin Buttons-->
         <div class="buttons">
             <button id="start" onclick="start()">Começar</button>
             <button id="pause" onclick="reset()">Resetar</button>
             <button id="stop" onclick="stop()">Parar</button>
         </div>
+        <button id="newTime">Definir novo tempo</button>
+        <!--End Buttons-->
     </header>
+    <!--End Header-->
 
-    <script src="JS/script.js"></script>
+    <!--<main>
+        <button class="define" onclick="newtime()">Definir tempo</button>
+    </main>-->
+
+    <!--Begin Dialog Session-->
+    <dialog class="changeTime" id="modal">
+        <h3>Configure um novo tempo</h3>
+        <span class="newTimeInput">
+            <label>Minutos</label>
+            <input type="number">
+            <label>Segundos</label>
+            <input type="number">
+        </span>
+        <button id="confirmTime">Confirmar</button>
+    </dialog>
 </body>
 </html>

@@ -30,7 +30,7 @@ header{
     justify-content: space-around;
 
 }
-.hours, .minutes, .seconds{
+.minutes, .seconds{
     width: 64px;
     height: 64px;
     padding:16px;
@@ -41,11 +41,11 @@ header{
     align-items: center;
     flex-flow: column;
 }
-.hours, .minutes, .seconds p{
+.minutes, .seconds p{
     font-size: 1.5rem;
     font-weight: bold;
 }
-.hours, .minutes, .seconds h4{
+.minutes, .seconds h4{
     text-transform: lowercase;
     font-size: 24px;
 
@@ -58,13 +58,14 @@ header{
     align-items: center;
     width:40%;
     height: 10%;
+    
 }
 .buttons button{
     padding:10px 20px;
     color:white;
     font-weight: bold;
     border:none;
-    border-radius: 2px;
+    border-radius: 10px;
 }
 .buttons button:hover{
     cursor: pointer;
@@ -100,19 +101,30 @@ header{
     border:1px solid orange;
     color:orange;
 }
-/*Configuração do botão de menu*/
-.menu{
-    width: 32px;
-    height: 32px;
-    border-radius: 999px;
-    /* border:1px solid black; */
-    position:fixed;
-    left:8px;
-    top:8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color:black;
+/*Configuração do botão de novo tempo*/
+#newTime{
+    padding:10px 20px;
+    background-color: green;
+    color:white;
+    font-weight: bold;
+    border:1px solid green;
+    border-radius: 10px;
+    cursor: pointer;
+    transition:0.5s ease;
 }
+#newTime:hover{
+    background-color: white;
+    color:green;
+}
+/*End Set new time button style*/
 
+/*Change Time Dialog Style*/
+
+dialog{
+    position:relative;
+    top:300px;
+    left:23%;
+    border-radius: 10px;
+    text-align: center;
+    padding:20px 10px;
+}
