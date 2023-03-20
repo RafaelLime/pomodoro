@@ -1,9 +1,12 @@
+//Declarations
 let sec =0;
 let min = 50;
 let secField = document.getElementById("seconds");
 let minField = document.getElementById("minutes");
+const newTimeButton = document.querySelector("button#newTime");
+const modal = document.getElementById("modal");
 
-
+//Function set up the timer
 function count(){
     if ((min>0)&&(sec==0)){
         min--;
@@ -18,7 +21,7 @@ function count(){
         clearInterval(Interval)
     }
 }
-
+//Function to start the timer
 function start(){
     Interval = setInterval(count,1000)
 }
@@ -27,11 +30,12 @@ function stopAlert(){
     clearInterval(Interval)
 
 }
-
+//Function to stop the timer
 function stop(){
     clearInterval(Interval)
 
 }
+//Function to reset the timer
 function reset(){
     stop
     minField.innerHTML=50
@@ -42,36 +46,34 @@ function reset(){
 
 //Begin New Time Button Script
 const timebutton = document.getElementById('newTime');
-// const modal = document.querySelector("dialog");
 
-// function show(){
-//     modal.show()
-// }
-// function closePop(){
-//     modal.close()
-// }
-
-// timebutton.addEventListener('click',show);
-
-// const confirmButton = document.getElementById('confirmTime');
-
-// confirmButton.addEventListener('click',closePop)
-
-function newtime(){
-    sec = prompt("Novo tempo segundos")
-    min = prompt("Novo tempo minutos")
-
-    secField.innerHTML = sec
-    minField.innerHTML = min
+//Button to open the dialog
+function open_modal(){
+    modal.showModal();
 }
 
 
+newTimeButton.addEventListener('click',open_modal);
+
+//New time dialog and button
+const conf_btn = document.getElementById('confirmTime');
 
 
+function newTime(){
+    sec = document.getElementById('sec').value;
+    min = document.getElementById('min').value;
 
+    if ((sec==null)||(sec==NaN)||(sec=="")){
+        sec = 0
+    }
+    if ((min==null)||(min==NaN)||(min=="")){
+        min = 0
+    }
+    
 
+    secField.innerHTML=sec;
+    minField.innerHTML=min;
+    modal.close();
+}
 
-
-
-timebutton.addEventListener('click',newtime);
-
+conf_btn.addEventListener('click',newTime);

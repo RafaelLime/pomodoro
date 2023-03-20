@@ -120,11 +120,27 @@ header{
 
 /*Change Time Dialog Style*/
 
-dialog{
-    position:relative;
-    top:300px;
-    left:23%;
+#modal{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
     border-radius: 10px;
     text-align: center;
-    padding:20px 10px;
+    padding:50px;
+    box-shadow: black 2px 2px 5px;
+}
+#confirmTime{
+    padding:10px 20px;
+    background-color: blue;
+    border:1px solid blue;
+    color:white;
+    font-weight: bold;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.5s ease;
+}
+#confirmTime:hover{
+    color:blue;
+    background-color: white;
 }

@@ -19,7 +19,7 @@
         <div class="time">
             <span class="minutes">
                 <h5>Min</h5>
-                <p id="minutes">0</p>
+                <p id="minutes">50</p>
             </span>
             <span class="seconds">
                 <h5>Seg</h5>
@@ -45,12 +45,12 @@
 
     <!--Begin Dialog Session-->
     <dialog class="changeTime" id="modal">
-        <h3>Configure um novo tempo</h3>
+        <h3>Configure um novo tempo</h3><br>
         <span class="newTimeInput">
-            <label>Minutos</label>
-            <input type="number">
-            <label>Segundos</label>
-            <input type="number">
+            <label>Minutos</label><br>
+            <input type="number" id="min"><br><br>
+            <label>Segundos</label><br>
+            <input type="number" id="sec"><br><br>
         </span>
         <button id="confirmTime">Confirmar</button>
     </dialog>
